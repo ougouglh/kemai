@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+out/
+*.csv
+!data/flavor_pool_unified.csv
+!data/品类定义表_20260409_品类定义详情.csv
+!data/auto_alias_dict.csv

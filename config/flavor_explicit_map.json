@@ -1,0 +1,2106 @@
+{
+  "_description": "口味显式映射表 - 设计原则：1.显式层尽量只放强唯一触发词 2.不在explicit层互相混指 3.同义冲突交给后处理/互斥裁决解决",
+  "_version": "1.2",
+  "_last_updated": "2026-04-03",
+  "_schema": "口味名: {markers: [触发词列表], is_fruit: true/false, fruit_words: [用于信号检测的水果词]}",
+  "_flavor_signal_rules": {
+    "_description": "口味信号检测规则",
+    "context_words": [
+      "茶", "茶饮", "茶饮料", "饮料", "果汁", "汁",
+      "乳饮", "乳酸菌", "酸奶", "发酵乳", "含乳",
+      "苏打", "汽水", "果奶", "牛奶", "奶"
+    ],
+    "flavor_friendly_categories": [
+      "即饮茶",
+      "果汁饮料",
+      "果味饮料",
+      "乳酸菌饮料",
+      "发酵型含乳饮料",
+      "配制型含乳饮料",
+      "碳酸饮料",
+      "调味乳",
+      "含乳饮料"
+    ]
+  },
+  "原味": {
+    "markers": [
+      "原味",
+      "经典原味",
+      "纯正原味",
+      "原味型"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "基础口味"
+  },
+  "原味（纯牛乳）": {
+    "markers": [
+      "原味",
+      "纯牛乳",
+      "纯牛奶",
+      "鲜牛奶",
+      "纯鲜"
+    ],
+    "is_fruit": false
+  },
+  "原味（纯牛奶）": {
+    "markers": [
+      "原味",
+      "纯牛奶",
+      "纯牛乳",
+      "鲜牛奶"
+    ],
+    "is_fruit": false
+  },
+  "清淡原味": {
+    "markers": [
+      "清淡",
+      "原味",
+      "清淡型"
+    ],
+    "is_fruit": false
+  },
+  "鲜醇奶香": {
+    "markers": [
+      "鲜醇",
+      "奶香",
+      "醇香"
+    ],
+    "is_fruit": false
+  },
+  "奶香浓郁": {
+    "markers": [
+      "奶香",
+      "浓郁"
+    ],
+    "is_fruit": false
+  },
+  "草莓味": {
+    "markers": [
+      "草莓",
+      "草莓果味",
+      "草莓风味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "草莓"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "蓝莓味": {
+    "markers": [
+      "蓝莓",
+      "蓝莓果味",
+      "蓝莓风味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "蓝莓"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "蔓越莓味": {
+    "markers": [
+      "蔓越莓味",
+      "蔓越莓"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "蔓越莓"
+    ]
+  },
+  "树莓味": {
+    "markers": [
+      "树莓味",
+      "树莓"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "树莓"
+    ]
+  },
+  "葡萄味": {
+    "markers": [
+      "葡萄",
+      "葡萄果味",
+      "葡萄风味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "葡萄"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "青提味": {
+    "markers": [
+      "青提味",
+      "青提"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "青提"
+    ]
+  },
+  "红提味": {
+    "markers": [
+      "红提味",
+      "红提"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "红提"
+    ]
+  },
+  "蜜柚味": {
+    "markers": [
+      "蜜柚味",
+      "蜜柚"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "蜜柚"
+    ]
+  },
+  "橙味": {
+    "markers": [
+      "橙子味",
+      "橙",
+      "橙子"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "橙子",
+      "鲜橙",
+      "橙果肉",
+      "橙滴"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "香橙味": {
+    "markers": [
+      "香橙味",
+      "香橙"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "香橙"
+    ]
+  },
+  "柠檬味": {
+    "markers": [
+      "柠檬",
+      "柠檬果味",
+      "柠檬风味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "柠檬"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "青柠味": {
+    "markers": [
+      "青柠味",
+      "青柠",
+      "清柠"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "青柠",
+      "清柠"
+    ]
+  },
+  "柚子味": {
+    "markers": [
+      "柚子味",
+      "柚子"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "柚子"
+    ]
+  },
+  "西柚味": {
+    "markers": [
+      "西柚味",
+      "西柚",
+      "西柚汁"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "西柚"
+    ]
+  },
+  "椰子味": {
+    "markers": [
+      "椰子",
+      "椰子香"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "椰子",
+      "椰子水"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "热带水果口味"
+  },
+  "桃味": {
+    "markers": [
+      "桃味",
+      "桃汁",
+      "鲜桃",
+      "桃果肉"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "鲜桃",
+      "桃果肉"
+    ]
+  },
+  "水蜜桃味": {
+    "markers": [
+      "水蜜桃"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "水蜜桃",
+      "蜜桃"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "白桃味": {
+    "markers": [
+      "白桃味",
+      "白桃"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "白桃"
+    ]
+  },
+  "黄桃味": {
+    "markers": [
+      "黄桃味",
+      "黄桃"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "黄桃"
+    ]
+  },
+  "芒果味": {
+    "markers": [
+      "芒果",
+      "芒果果味",
+      "芒果风味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "芒果"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "荔枝味": {
+    "markers": [
+      "荔枝味",
+      "荔枝"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "荔枝"
+    ]
+  },
+  "苹果味": {
+    "markers": [
+      "苹果味",
+      "苹果",
+      "苹果汁"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "苹果"
+    ]
+  },
+  "菠萝味": {
+    "markers": [
+      "菠萝味",
+      "菠萝"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "菠萝"
+    ]
+  },
+  "凤梨味": {
+    "markers": [
+      "凤梨味",
+      "凤梨"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "凤梨"
+    ]
+  },
+  "西瓜味": {
+    "markers": [
+      "西瓜",
+      "西瓜果味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "西瓜"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "哈密瓜味": {
+    "markers": [
+      "哈密瓜",
+      "蜜瓜味"
+    ],
+    "is_fruit": false,
+    "fruit_words": [
+      "哈密瓜"
+    ],
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "百香果味": {
+    "markers": [
+      "百香果味",
+      "百香果"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "百香果"
+    ]
+  },
+  "芦荟味": {
+    "markers": [
+      "芦荟味",
+      "芦荟"
+    ],
+    "is_fruit": false
+  },
+  "枸杞味": {
+    "markers": [
+      "枸杞味",
+      "枸杞"
+    ],
+    "is_fruit": false
+  },
+  "石榴味": {
+    "markers": [
+      "石榴味",
+      "石榴"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "石榴"
+    ]
+  },
+  "山楂味": {
+    "markers": [
+      "山楂味",
+      "山楂"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "山楂"
+    ]
+  },
+  "梨味": {
+    "markers": [
+      "梨味",
+      "梨汁",
+      "鲜梨",
+      "梨果肉",
+      "香梨",
+      "库尔勒香梨",
+      "丰水梨",
+      "水晶梨",
+      "皇冠梨",
+      "砀山梨"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "鲜梨",
+      "梨果肉",
+      "香梨",
+      "雪梨"
+    ]
+  },
+  "橘子味": {
+    "markers": [
+      "橘子味",
+      "橘子",
+      "橘瓣",
+      "糖水橘子"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "橘子",
+      "橘"
+    ]
+  },
+  "杨梅味": {
+    "markers": [
+      "杨梅味",
+      "杨梅",
+      "糖水杨梅"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "杨梅"
+    ]
+  },
+  "雪梨味": {
+    "markers": [
+      "雪梨味",
+      "雪梨"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "雪梨"
+    ]
+  },
+  "枇杷味": {
+    "markers": [
+      "枇杷味",
+      "枇杷"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "枇杷"
+    ]
+  },
+  "桑葚味": {
+    "markers": [
+      "桑葚味",
+      "桑葚",
+      "桑果",
+      "桑果汁"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "桑葚",
+      "桑果"
+    ]
+  },
+  "青梅味": {
+    "markers": [
+      "青梅味",
+      "青梅"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "青梅"
+    ]
+  },
+  "冰糖雪梨味": {
+    "markers": [
+      "冰糖雪梨味",
+      "冰糖雪梨"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "冰糖雪梨"
+    ]
+  },
+  "番茄味": {
+    "markers": [
+      "番茄味",
+      "番茄",
+      "番茄汁"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "番茄"
+    ]
+  },
+  "柿子味": {
+    "markers": [
+      "柿子味",
+      "柿子",
+      "柿子汁"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "柿子"
+    ]
+  },
+  "桔味": {
+    "markers": [
+      "桔味",
+      "桔子",
+      "桔果汁",
+      "桔果",
+      "柑橘"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "桔子",
+      "柑橘",
+      "桔果"
+    ]
+  },
+  "三柚味": {
+    "markers": [
+      "三柚味",
+      "三柚",
+      "三柚汁"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "三柚"
+    ]
+  },
+  "椰果味": {
+    "markers": [
+      "椰果味",
+      "椰果"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "椰果"
+    ]
+  },
+  "橄榄味": {
+    "markers": [
+      "橄榄味",
+      "橄榄",
+      "滇橄榄"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "橄榄",
+      "滇橄榄"
+    ]
+  },
+  "芦柑味": {
+    "markers": [
+      "芦柑味",
+      "芦柑"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "芦柑"
+    ]
+  },
+  "芭乐味": {
+    "markers": [
+      "芭乐味",
+      "芭乐",
+      "番石榴"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "芭乐",
+      "番石榴"
+    ]
+  },
+  "红毛丹味": {
+    "markers": [
+      "红毛丹味",
+      "红毛丹"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "红毛丹"
+    ]
+  },
+  "沙棘味": {
+    "markers": [
+      "沙棘味",
+      "沙棘"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "沙棘"
+    ]
+  },
+  "酸角味": {
+    "markers": [
+      "酸角味",
+      "酸角"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "酸角"
+    ]
+  },
+  "甘蔗味": {
+    "markers": [
+      "甘蔗味",
+      "甘蔗",
+      "鲜蔗"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "甘蔗",
+      "鲜蔗"
+    ]
+  },
+  "黄金桃味": {
+    "markers": [
+      "黄金桃味",
+      "黄金桃"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "黄金桃"
+    ]
+  },
+  "_comment_非水果口味": "以下是非水果类口味，is_fruit为false",
+  "_comment_巧克力味": "配制型含乳饮料的标准口味为'巧克力味/朱古力风味'，添加复合名称映射",
+  "巧克力味/朱古力风味": {
+    "markers": [
+      "巧克力味",
+      "巧克力",
+      "可可味",
+      "朱古力"
+    ],
+    "is_fruit": false
+  },
+  "巧克力味": {
+    "markers": [
+      "巧克力",
+      "可可味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "甜食口味"
+  },
+  "咖啡味": {
+    "markers": [
+      "咖啡",
+      "咖啡香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "饮料口味"
+  },
+  "美式": {
+    "markers": [
+      "美式",
+      "美式咖啡",
+      "美式味"
+    ],
+    "is_fruit": false,
+    "_source": "V17.33手动添加",
+    "_comment": "咖啡类型"
+  },
+  "香草味": {
+    "markers": [
+      "香草",
+      "香草香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "甜食口味"
+  },
+  "抹茶味": {
+    "markers": [
+      "抹茶",
+      "抹茶香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "茶类口味"
+  },
+  "芝士味": {
+    "markers": [
+      "芝士",
+      "奶酪味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "乳制品口味"
+  },
+  "奶油味": {
+    "markers": [
+      "奶油味",
+      "奶油",
+      "奶香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "乳制品口味"
+  },
+  "奶油": {
+    "markers": [
+      "奶油",
+      "奶油味",
+      "奶香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "乳制品口味"
+  },
+  "酸奶味": {
+    "markers": [
+      "酸奶",
+      "酸奶味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "发酵乳口味"
+  },
+  "核桃味": {
+    "markers": [
+      "核桃",
+      "核桃香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "坚果口味"
+  },
+  "花生味": {
+    "markers": [
+      "花生",
+      "花生香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "坚果口味"
+  },
+  "红枣味": {
+    "markers": [
+      "红枣",
+      "枣味",
+      "干果口味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": ""
+  },
+  "红枣 / 枸杞": {
+    "markers": [
+      "红枣",
+      "枸杞",
+      "大枣"
+    ],
+    "is_fruit": false
+  },
+  "燕麦 / 谷物": {
+    "markers": [
+      "燕麦",
+      "谷物"
+    ],
+    "is_fruit": false
+  },
+  "混合莓果": {
+    "markers": [
+      "混合莓果"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "莓果",
+      "混合莓"
+    ]
+  },
+  "芝麻味": {
+    "markers": [
+      "芝麻",
+      "芝麻味",
+      "黑芝麻",
+      "白芝麻"
+    ],
+    "is_fruit": false
+  },
+  "豆奶味": {
+    "markers": [
+      "豆奶味",
+      "豆奶",
+      "豆乳味",
+      "豆乳"
+    ],
+    "is_fruit": false
+  },
+  "燕麦味": {
+    "markers": [
+      "燕麦味",
+      "燕麦"
+    ],
+    "is_fruit": false
+  },
+  "谷物味": {
+    "markers": [
+      "谷物味",
+      "谷物"
+    ],
+    "is_fruit": false
+  },
+  "_comment_奶茶类口味": "即饮奶茶标准口味（从品类定义表提取），is_fruit为false",
+  "原味奶茶": {
+    "markers": [
+      "原味奶茶",
+      "原味"
+    ],
+    "is_fruit": false
+  },
+  "红茶奶茶": {
+    "markers": [
+      "红茶奶茶",
+      "红茶"
+    ],
+    "is_fruit": false
+  },
+  "绿茶奶茶": {
+    "markers": [
+      "绿茶奶茶",
+      "绿茶",
+      "奶绿"
+    ],
+    "is_fruit": false
+  },
+  "茉莉花茶奶茶": {
+    "markers": [
+      "茉莉花茶奶茶",
+      "茉莉奶茶",
+      "茉莉奶绿"
+    ],
+    "is_fruit": false
+  },
+  "普洱奶茶": {
+    "markers": [
+      "普洱奶茶",
+      "普洱茶"
+    ],
+    "is_fruit": false
+  },
+  "草莓奶茶": {
+    "markers": [
+      "草莓奶茶",
+      "草莓味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "芒果奶茶": {
+    "markers": [
+      "芒果奶茶",
+      "芒果味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "蜜桃奶茶": {
+    "markers": [
+      "蜜桃奶茶",
+      "蜜桃味奶茶",
+      "桃桃"
+    ],
+    "is_fruit": false
+  },
+  "葡萄奶茶": {
+    "markers": [
+      "葡萄奶茶",
+      "葡萄味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "百香果奶茶": {
+    "markers": [
+      "百香果奶茶",
+      "百香果味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "柠檬奶茶": {
+    "markers": [
+      "柠檬奶茶",
+      "柠檬味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "巧克力奶茶": {
+    "markers": [
+      "巧克力奶茶",
+      "巧克力口味",
+      "巧克力味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "焦糖奶茶": {
+    "markers": [
+      "焦糖奶茶",
+      "焦糖味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "焦糖味": {
+    "markers": [
+      "焦糖",
+      "焦糖味",
+      "焦糖风味"
+    ],
+    "is_fruit": false
+  },
+  "牛油味": {
+    "markers": [
+      "牛油",
+      "牛油味"
+    ],
+    "is_fruit": false
+  },
+  "黄油味": {
+    "markers": [
+      "黄油",
+      "黄油味"
+    ],
+    "is_fruit": false
+  },
+  "咖啡奶茶": {
+    "markers": [
+      "咖啡奶茶",
+      "炭烧鸳鸯",
+      "鸳鸯奶茶",
+      "咖啡味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "红豆奶茶": {
+    "markers": [
+      "红豆奶茶",
+      "红豆味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "抹茶奶茶": {
+    "markers": [
+      "抹茶奶茶",
+      "抹茶味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "芝士奶茶": {
+    "markers": [
+      "芝士奶茶",
+      "芝士味奶茶"
+    ],
+    "is_fruit": false
+  },
+  "_non_fruit_flavor_words": [
+    "巧克力",
+    "可可",
+    "咖啡",
+    "香草",
+    "抹茶",
+    "奶香",
+    "芝士",
+    "榛子",
+    "核桃",
+    "花生",
+    "红枣",
+    "芝麻",
+    "豆奶",
+    "燕麦",
+    "谷物",
+    "凉茶",
+    "菊花",
+    "冬瓜",
+    "酸梅",
+    "金银花",
+    "银花",
+    "玉米",
+    "马蹄",
+    "荸荠",
+    "绿豆",
+    "红豆",
+    "薏米",
+    "甘蔗",
+    "茅根",
+    "葛根",
+    "枇杷",
+    "秋梨",
+    "陈皮",
+    "乌梅",
+    "枸杞",
+    "桑葚",
+    "蜂蜜",
+    "薄荷",
+    "甘草",
+    "姜",
+    "枣",
+    "杏皮",
+    "白桦",
+    "玫瑰",
+    "红豆",
+    "玉米",
+    "豆浆",
+    "核桃",
+    "花生",
+    "杏仁",
+    "酸角",
+    "诃子",
+    "仙草",
+    "五花",
+    "三花",
+    "清菲",
+    "清味乐",
+    "清开",
+    "玉米汁",
+    "冬瓜茶",
+    "酸梅汤",
+    "金银花露",
+    "银花露",
+    "马蹄爽",
+    "绿豆沙",
+    "绿豆冰沙",
+    "黄金菊",
+    "小青柑",
+    "青柑",
+    "红毛丹",
+    "小吊梨汤",
+    "小吊梨",
+    "桔片爽",
+    "桔片",
+    "大麦茶",
+    "大麦",
+    "罗汉果",
+    "青柠",
+    "咸青柠",
+    "刺柠吉",
+    "刺梨",
+    "竹清茶",
+    "淡竹",
+    "黄精茶",
+    "黄精",
+    "蛹虫草",
+    "虫草",
+    "黑豆",
+    "黑米",
+    "竹叶",
+    "杭青梨",
+    "青梨",
+    "桑椹五黑水",
+    "五黑水",
+    "决明子",
+    "白花蛇草",
+    "玄米茶",
+    "青柑玄米",
+    "胖大海",
+    "罗汉果",
+    "咸柑桔",
+    "柑桔",
+    "青柠",
+    "枇杷",
+    "秋梨",
+    "红豆薏米",
+    "红豆水",
+    "薏米水",
+    "玉米汁",
+    "甘蔗",
+    "茅根",
+    "蔗汁",
+    "葛根",
+    "黄芪",
+    "杏仁",
+    "核桃",
+    "花生",
+    "豆浆",
+    "南瓜浆",
+    "南瓜",
+    "玉米浆",
+    "绿豆冰",
+    "豆沙",
+    "豆沙绿",
+    "绿沙冰",
+    "豆沙冰",
+    "豆沙冰糖",
+    "竹叶水",
+    "竹叶黄酮",
+    "淡竹饮",
+    "竹饮",
+    "黑米黑豆水",
+    "黑豆水",
+    "五黑茶",
+    "草本饮",
+    "草本",
+    "植物饮",
+    "植物",
+    "刺梨",
+    "刺柠",
+    "吉年华",
+    "吉上加吉",
+    "清茶",
+    "竹清茶",
+    "黄精茶",
+    "八宝茶",
+    "乌龙茶",
+    "乌龙茶",
+    "青柑乌龙",
+    "白桦树汁",
+    "白桦",
+    "桦树汁",
+    "玫瑰水",
+    "玫瑰",
+    "杏皮凉茶",
+    "杏皮",
+    "甘菊",
+    "杭白菊",
+    "白菊",
+    "苹果黄芪水",
+    "黄芪水",
+    "桑椹五黑水",
+    "五黑水",
+    "桑椹水",
+    "清凉",
+    "清凉爽",
+    "冰茶",
+    "旭日升",
+    "五谷杂粮",
+    "杂粮",
+    "五谷",
+    "柯子",
+    "诃子",
+    "沙冰",
+    "绿夏",
+    "茶活力",
+    "活力",
+    "小米不扎",
+    "小米",
+    "豆冰沙",
+    "果汁",
+    "美果来",
+    "桂花",
+    "炼乳",
+    "香浓",
+    "生椰",
+    "香芋",
+    "炭烧",
+    "龙井",
+    "奶绿",
+    "乌龙",
+    "普洱",
+    "鸳鸯",
+    "麦牛",
+    "麦香",
+    "玫瑰",
+    "大红袍",
+    "黑糖",
+    "青砖",
+    "海盐"
+  ],
+  "_comment_水类口味": "包装水类标准口味（纯净水、蒸馏水、矿泉水、天然水、矿物质水、其他包装水）",
+  "无味": {
+    "markers": [
+      "无香",
+      "清淡",
+      "原味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "原味类型"
+  },
+  "原味（天然）": {
+    "markers": [
+      "原味",
+      "天然",
+      "矿泉水",
+      "矿物质水"
+    ],
+    "is_fruit": false
+  },
+  "含气": {
+    "markers": [
+      "含气",
+      "气泡",
+      "苏打",
+      "有气"
+    ],
+    "is_fruit": false
+  },
+  "无气": {
+    "markers": [
+      "无气",
+      "不含气"
+    ],
+    "is_fruit": false
+  },
+  "苏打味": {
+    "markers": [
+      "苏打",
+      "苏打水"
+    ],
+    "is_fruit": false
+  },
+  "果味（淡风味）": {
+    "markers": [
+      "果味",
+      "淡风味",
+      "柠檬",
+      "蜜桃",
+      "苹果",
+      "葡萄",
+      "橙"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "柠檬",
+      "蜜桃",
+      "苹果",
+      "葡萄",
+      "橙子"
+    ]
+  },
+  "_comment_啤酒口味": "啤酒标准口味（依据品类定义表）",
+  "清爽": {
+    "markers": [
+      "清爽",
+      "清爽型"
+    ],
+    "is_fruit": false
+  },
+  "淡爽": {
+    "markers": [
+      "淡爽",
+      "淡爽型"
+    ],
+    "is_fruit": false
+  },
+  "醇厚": {
+    "markers": [
+      "醇厚",
+      "醇厚型"
+    ],
+    "is_fruit": false
+  },
+  "麦香": {
+    "markers": [
+      "麦香",
+      "麦芽香",
+      "小麦香"
+    ],
+    "is_fruit": false
+  },
+  "果香": {
+    "markers": [
+      "果香",
+      "果味啤酒",
+      "果味"
+    ],
+    "is_fruit": false
+  },
+  "微苦": {
+    "markers": [
+      "微苦",
+      "苦味"
+    ],
+    "is_fruit": false
+  },
+  "甘甜": {
+    "markers": [
+      "甘甜",
+      "甜味"
+    ],
+    "is_fruit": false
+  },
+  "顺滑": {
+    "markers": [
+      "顺滑",
+      "顺滑型"
+    ],
+    "is_fruit": false
+  },
+  "_comment_中国白酒香型": "中国白酒12大香型（依据品类定义表）",
+  "酱香型": {
+    "markers": [
+      "酱香型",
+      "酱香"
+    ],
+    "is_fruit": false
+  },
+  "浓香型": {
+    "markers": [
+      "浓香型",
+      "浓香"
+    ],
+    "is_fruit": false
+  },
+  "清香型": {
+    "markers": [
+      "清香型",
+      "清香"
+    ],
+    "is_fruit": false
+  },
+  "米香型": {
+    "markers": [
+      "米香型",
+      "米香"
+    ],
+    "is_fruit": false
+  },
+  "凤香型": {
+    "markers": [
+      "凤香型",
+      "凤香"
+    ],
+    "is_fruit": false
+  },
+  "兼香型": {
+    "markers": [
+      "兼香型",
+      "兼香",
+      "浓酱兼香"
+    ],
+    "is_fruit": false
+  },
+  "豉香型": {
+    "markers": [
+      "豉香型",
+      "豉香"
+    ],
+    "is_fruit": false
+  },
+  "特香型": {
+    "markers": [
+      "特香型",
+      "特香"
+    ],
+    "is_fruit": false
+  },
+  "药香型": {
+    "markers": [
+      "药香型",
+      "药香",
+      "董香型",
+      "董香"
+    ],
+    "is_fruit": false
+  },
+  "老白干香型": {
+    "markers": [
+      "老白干香型",
+      "老白干",
+      "老日干",
+      "老日干香型"
+    ],
+    "is_fruit": false
+  },
+  "芝麻香型": {
+    "markers": [
+      "芝麻香型",
+      "芝麻香"
+    ],
+    "is_fruit": false
+  },
+  "馥郁香型": {
+    "markers": [
+      "馥郁香型",
+      "馥郁香"
+    ],
+    "is_fruit": false
+  },
+  "_comment_糖果类口味": "硬糖、软糖、胶基糖果标准口味",
+  "水果味": {
+    "markers": [
+      "水果味",
+      "水果"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "水果"
+    ]
+  },
+  "薄荷 / 清凉味": {
+    "markers": [
+      "薄荷",
+      "清凉",
+      "桉叶",
+      "润喉",
+      "留兰香",
+      "冰爽",
+      "冬青"
+    ],
+    "is_fruit": false
+  },
+  "奶味": {
+    "markers": [
+      "奶味",
+      "牛奶味",
+      "奶香",
+      "奶油",
+      "乳味",
+      "奶酪"
+    ],
+    "is_fruit": false
+  },
+  "可可味": {
+    "markers": [
+      "可可味",
+      "可可"
+    ],
+    "is_fruit": false
+  },
+  "复合风味": {
+    "markers": [
+      "复合",
+      "什锦",
+      "缤纷",
+      "杂果"
+    ],
+    "is_fruit": false
+  },
+  "话梅味": {
+    "markers": [
+      "话梅",
+      "梅子",
+      "乌梅",
+      "酸梅"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "话梅",
+      "梅子"
+    ]
+  },
+  "可乐味": {
+    "markers": [
+      "可乐",
+      "可乐味"
+    ],
+    "is_fruit": false
+  },
+  "陈皮味": {
+    "markers": [
+      "陈皮",
+      "陈皮味",
+      "柑橘皮"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "陈皮"
+    ]
+  },
+  "梨膏味": {
+    "markers": [
+      "梨膏",
+      "秋梨膏",
+      "梨味"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "梨"
+    ]
+  },
+  "咸柠味": {
+    "markers": [
+      "咸柠",
+      "咸柠檬",
+      "柠檬盐"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "柠檬"
+    ]
+  },
+  "薄荷清凉类": {
+    "markers": [
+      "薄荷",
+      "清凉",
+      "冰爽",
+      "清新"
+    ],
+    "is_fruit": false
+  },
+  "水果类": {
+    "markers": [
+      "水果",
+      "果味",
+      "草莓",
+      "葡萄",
+      "西瓜",
+      "苹果",
+      "橙子",
+      "柠檬",
+      "蜜桃",
+      "菠萝",
+      "芒果",
+      "蓝莓",
+      "樱桃",
+      "荔枝"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "草莓",
+      "葡萄",
+      "西瓜",
+      "苹果",
+      "橙子",
+      "柠檬",
+      "蜜桃",
+      "菠萝",
+      "芒果",
+      "蓝莓",
+      "樱桃",
+      "荔枝"
+    ]
+  },
+  "奶香味类": {
+    "markers": [
+      "奶香",
+      "牛奶",
+      "奶油",
+      "乳香",
+      "奶味"
+    ],
+    "is_fruit": false
+  },
+  "草本/植物类": {
+    "markers": [
+      "草本",
+      "植物",
+      "金银花",
+      "菊花",
+      "甘草",
+      "罗汉果",
+      "枇杷"
+    ],
+    "is_fruit": false
+  },
+  "复合风味类": {
+    "markers": [
+      "复合",
+      "混合",
+      "缤纷",
+      "什锦",
+      "杂果"
+    ],
+    "is_fruit": false
+  },
+  "其他特色类": {
+    "markers": [
+      "特色",
+      "特调",
+      "秘制"
+    ],
+    "is_fruit": false
+  },
+  "_comment_能量饮料口味": "能量饮料标准口味",
+  "青瓜味": {
+    "markers": [
+      "青瓜",
+      "黄瓜"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "青瓜",
+      "黄瓜"
+    ]
+  },
+  "海盐荔枝味": {
+    "markers": [
+      "海盐荔枝",
+      "盐荔枝"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "荔枝"
+    ]
+  },
+  "缤纷莓果味": {
+    "markers": [
+      "缤纷莓果"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "莓果"
+    ]
+  },
+  "椰子水味": {
+    "markers": [
+      "椰子水",
+      "椰水"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "椰子"
+    ]
+  },
+  "_comment_即饮奶茶补充口味": "即饮奶茶标准口味补充",
+  "香芋味奶茶": {
+    "markers": [
+      "香芋",
+      "芋泥",
+      "芋头"
+    ],
+    "is_fruit": false
+  },
+  "哈密瓜味奶茶": {
+    "markers": [
+      "哈密瓜",
+      "蜜瓜"
+    ],
+    "is_fruit": true,
+    "fruit_words": [
+      "哈密瓜",
+      "蜜瓜"
+    ]
+  },
+  "香草味奶茶": {
+    "markers": [
+      "香草",
+      "香草味"
+    ],
+    "is_fruit": false
+  },
+  "红豆味奶茶": {
+    "markers": [
+      "红豆",
+      "红豆味"
+    ],
+    "is_fruit": false
+  },
+  "绿豆味奶茶": {
+    "markers": [
+      "绿豆",
+      "绿豆味"
+    ],
+    "is_fruit": false
+  },
+  "仙草味奶茶": {
+    "markers": [
+      "仙草",
+      "仙草味"
+    ],
+    "is_fruit": false
+  },
+  "椰果奶茶": {
+    "markers": [
+      "椰果",
+      "椰果味"
+    ],
+    "is_fruit": false
+  },
+  "布丁奶茶": {
+    "markers": [
+      "布丁",
+      "布丁味"
+    ],
+    "is_fruit": false
+  },
+  "珍珠奶茶": {
+    "markers": [
+      "珍珠",
+      "珍珠味"
+    ],
+    "is_fruit": false
+  },
+  "芋圆奶茶": {
+    "markers": [
+      "芋圆",
+      "芋圆味"
+    ],
+    "is_fruit": false
+  },
+  "_comment_肉类脯类口味": "肉类脯类标准口味（猪肉脯/干、牛肉脯/干、鸡肉脯/干、鸭肉脯/干）",
+  "蜜汁味": {
+    "markers": [
+      "蜜汁",
+      "蜂蜜",
+      "蜜糖"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "甜味口味"
+  },
+  "香辣味": {
+    "markers": [
+      "香辣",
+      "香辣味"
+    ],
+    "is_fruit": false
+  },
+  "麻辣味": {
+    "markers": [
+      "麻辣",
+      "麻辣味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "川味口味"
+  },
+  "五香味": {
+    "markers": [
+      "五香",
+      "五香味"
+    ],
+    "is_fruit": false
+  },
+  "烧烤味": {
+    "markers": [
+      "烧烤",
+      "烤肉味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "烹饪口味"
+  },
+  "孜然味": {
+    "markers": [
+      "孜然",
+      "孜然味"
+    ],
+    "is_fruit": false
+  },
+  "沙嗲味": {
+    "markers": [
+      "沙嗲",
+      "沙嗲味",
+      "沙爹"
+    ],
+    "is_fruit": false
+  },
+  "炭烧味": {
+    "markers": [
+      "炭烧",
+      "炭烧味",
+      "炭烤"
+    ],
+    "is_fruit": false
+  },
+  "蒜香味": {
+    "markers": [
+      "蒜香",
+      "蒜蓉"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "黑胡椒味": {
+    "markers": [
+      "黑胡椒",
+      "黑胡椒味",
+      "黑椒"
+    ],
+    "is_fruit": false
+  },
+  "其他": {
+    "markers": [
+      "鲜肉",
+      "桂花",
+      "玫瑰",
+      "奶黄",
+      "红枣",
+      "桂圆",
+      "黑糯米",
+      "大黄米",
+      "五仁",
+      "八宝",
+      "果仁",
+      "红糖",
+      "龙井",
+      "茉莉",
+      "白桃",
+      "椰",
+      "拿铁",
+      "猪肉",
+      "牛肉",
+      "羊肉",
+      "鸡肉",
+      "鸭肉",
+      "虾肉",
+      "鱼肉",
+      "白菜",
+      "韭菜",
+      "芹菜",
+      "荠菜",
+      "香菇",
+      "玉米",
+      "豆角",
+      "虾仁",
+      "虾皇"
+    ],
+    "is_fruit": false
+  },
+  "_comment_类目特定水果映射": "类目特定的水果分类映射（如水果罐头的浆果类、仁果类等）",
+  "_category_specific_fruit_map": {
+    "水果罐头": {
+      "草莓": "浆果类",
+      "蓝莓": "浆果类",
+      "蔓越莓": "浆果类",
+      "树莓": "浆果类",
+      "桑葚": "浆果类",
+      "苹果": "仁果类",
+      "梨": "仁果类",
+      "香梨": "仁果类",
+      "库尔勒香梨": "仁果类",
+      "丰水梨": "仁果类",
+      "水晶梨": "仁果类",
+      "皇冠梨": "仁果类",
+      "砀山梨": "仁果类",
+      "雪梨": "仁果类",
+      "山楂": "仁果类",
+      "海棠": "仁果类",
+      "桃": "核果类",
+      "水蜜桃": "核果类",
+      "白桃": "核果类",
+      "黄桃": "核果类",
+      "杏": "核果类",
+      "李子": "核果类",
+      "樱桃": "核果类",
+      "杨梅": "核果类",
+      "橘子": "柑橘类",
+      "橘": "柑橘类",
+      "橘瓣": "柑橘类",
+      "橙": "柑橘类",
+      "橙子": "柑橘类",
+      "桔子": "柑橘类",
+      "柠檬": "柑橘类",
+      "青柠": "柑橘类",
+      "柚子": "柑橘类",
+      "西柚": "柑橘类",
+      "砂糖橘": "柑橘类",
+      "金桔": "柑橘类",
+      "菠萝": "热带水果",
+      "凤梨": "热带水果",
+      "芒果": "热带水果",
+      "荔枝": "热带水果",
+      "龙眼": "热带水果",
+      "香蕉": "热带水果",
+      "木瓜": "热带水果",
+      "椰子": "热带水果",
+      "西瓜": "热带水果",
+      "哈密瓜": "热带水果",
+      "甜瓜": "热带水果",
+      "猕猴桃": "热带水果",
+      "百香果": "热带水果",
+      "石榴": "热带水果",
+      "葡萄": "热带水果",
+      "青提": "热带水果",
+      "热带": "热带水果",
+      "什锦": "什锦水果",
+      "什锦水果": "什锦水果",
+      "混合水果": "什锦水果"
+    }
+  },
+  "什锦水果味": {
+    "markers": [
+      "什锦",
+      "什锦水果",
+      "混合水果",
+      "杂果"
+    ],
+    "is_fruit": false,
+    "_source": "manual",
+    "_comment": "混合水果口味"
+  },
+  "香蕉味": {
+    "markers": [
+      "香蕉",
+      "香蕉果味",
+      "香蕉风味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "水果口味"
+  },
+  "猕猴桃味": {
+    "markers": [
+      "猕猴桃",
+      "奇异果味",
+      "水果口味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": ""
+  },
+  "樱桃味": {
+    "markers": [
+      "樱桃",
+      "樱桃果味",
+      "水果口味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": ""
+  },
+  "杏仁味": {
+    "markers": [
+      "杏仁",
+      "杏仁香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "坚果口味"
+  },
+  "榛子味": {
+    "markers": [
+      "榛子",
+      "榛子香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "坚果口味"
+  },
+  "红茶味": {
+    "markers": [
+      "红茶",
+      "茶香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "茶类口味"
+  },
+  "绿茶味": {
+    "markers": [
+      "绿茶",
+      "茶香"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "茶类口味"
+  },
+  "茉莉花味": {
+    "markers": [
+      "茉莉",
+      "茉莉花茶",
+      "花茶味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "茶类口味"
+  },
+  "薄荷味": {
+    "markers": [
+      "薄荷",
+      "薄荷香",
+      "薄荷凉"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "清凉口味"
+  },
+  "奶香味": {
+    "markers": [
+      "奶香",
+      "牛奶味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "乳制品口味"
+  },
+  "咸味": {
+    "markers": [
+      "咸鲜",
+      "咸鲜味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "甜味": {
+    "markers": [
+      "甜",
+      "甜蜜",
+      "甜润"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "酸味": {
+    "markers": [
+      "酸",
+      "酸甜",
+      "酸爽"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "辣味": {
+    "markers": [
+      "麻辣",
+      "香辣",
+      "酸辣",
+      "微辣"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "酸甜味": {
+    "markers": [
+      "酸甜",
+      "酸甜甜"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "红烧味": {
+    "markers": [
+      "红烧",
+      "红焖"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "烹饪口味"
+  },
+  "酱香味": {
+    "markers": [
+      "酱香",
+      "酱制"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "姜味": {
+    "markers": [
+      "生姜",
+      "姜汁"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "五香料": {
+    "markers": [
+      "五香",
+      "五香粉",
+      "调料"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "注意：不是五香味"
+  },
+  "椒盐味": {
+    "markers": [
+      "椒盐",
+      "盐焗"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  },
+  "盐焗味": {
+    "markers": [
+      "盐焗",
+      "盐焗鸡味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "烹饪口味"
+  },
+  "海盐味": {
+    "markers": [
+      "海盐",
+      "盐",
+      "咸味"
+    ],
+    "is_fruit": false,
+    "_source": "flavor_alias_manual.csv",
+    "_comment": "调味口味"
+  }
+}
